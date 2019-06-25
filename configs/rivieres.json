@@ -1,0 +1,465 @@
+{
+	"regions": [
+		{
+			"nom": "Charlevoix",
+			"rivieres": [
+				{
+					"nom": "Du Gouffre",
+					"station": "051502",
+					"ponderation": 0.42
+				}, {
+					"nom": "Malbaie",
+					"section": "22 Milles",
+					"station": "051502",
+					"ponderation": 0.50
+				}, {
+					"nom": "Malbaie",
+					"section": "Hautes-Gorges",
+					"station": "051502",
+					"ponderation": 1
+				}
+			]
+		}, {
+			"nom": "Côte-Nord",
+			"rivieres": [
+				{
+					"nom": "Godbout",
+					"section": "1.6 km en amont du pont-route 138",
+					"station": "071401",
+					"ponderation": 1
+				}, {
+					"nom": "Magpie",
+					"section": "à la décharge du lac Magpie",
+					"station": "073503",
+					"ponderation": 1
+				}, {
+					"nom": "Moisie",
+					"section": "5.1 km en amont du pont du Q.N.S.L.R.",
+					"station": "072301",
+					"ponderation": 1
+				}
+			]
+		}, {
+			"nom": "Outaouais",
+			"rivieres": [
+				{
+					"nom": "Du Lièvre",
+					"section": "2.2 Km amont Rte 311",
+					"station": "040624",
+					"ponderation": 1
+				}, {
+					"nom": "Petite Nation",
+					"section": "à la décharge du lac Magpie",
+					"station": "040406",
+					"ponderation": 1.20
+				}
+			]
+		}, {
+			"nom": "Québec",
+			"rivieres": [
+				{
+					"nom": "Bras St-Nicolas",
+					"section": "",
+					"station": "023106",
+					"ponderation": 0.65
+				}, {
+					"nom": "Bras St-Victor",
+					"section": "",
+					"station": "023422",
+					"ponderation": 1
+				}, {
+					"nom": "Chaudiere",
+					"section": "Bas des chutes",
+					"station": "023402",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Chaudiere",
+					"section": "Lac Mégantic aval du barrage",
+					"station": "023427",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Chaudiere",
+					"section": "St-Lambert",
+					"station": "023402",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Des Neiges",
+					"section": "",
+					"station": "051001",
+					"ponderation": "0.27"
+				},{
+					"nom": "Du Loup",
+					"section": "   à 0.6 km en amont du pont-route 185",
+					"station": "022513",
+					"ponderation": "1.00"
+				},{
+					"nom": "Du Sud",
+					"section": "DuPin",
+					"station": "023106",
+					"ponderation": "0.70"
+				}, {
+					"nom": "Du Sud",
+					"section": "St-Raphael",
+					"station": "023106",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Etchemin",
+					"section": "Basse (ancienne information)",
+					"station": "023402",
+					"ponderation": "0.24"
+				}, {
+					"nom": "Etchemin",
+					"section": "Basse Rte 173 St-Henri de Levis",
+					"station": "023303",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Etchemin",
+					"section": "  Haute",
+					"station": "023402",
+					"ponderation": "0.1"
+				}, {
+					"nom": "Jacques-Cartier",
+					"section": "Grand-Remous",
+					"station": "050801",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Jacques-Cartier",
+					"section": "Parc (Vallée)",
+					"station": "050801",
+					"ponderation": "0.60"
+				}, {
+					"nom": "Jacques-Cartier",
+					"section": "Pont-Rouge",
+					"station": "050801",
+					"ponderation": "1.66"
+				}, {
+					"nom": "Jacques-Cartier",
+					"section": "Sainte-Catherine",
+					"station": "050801",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Jacques-Cartier",
+					"section": "Taureau",
+					"station": "050801",
+					"ponderation": "0.33"
+				}, {
+					"nom": "Jacques-Cartier",
+					"section": "Tewskesbury",
+					"station": "050801",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Montmorency",
+					"section": "Haute ",
+					"station": "051001",
+					"ponderation": "0.25"
+				}, {
+					"nom": "Montmorency",
+					"section": "Ste-Brigitte ",
+					"station": "051001",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Neilson 1997-Oct 2004",
+					"section": "",
+					"station": "050408",
+					"ponderation": "0.25"
+				}, {
+					"nom": "Neilson Oct 2004 -",
+					"section": "",
+					"station": "050409",
+					"ponderation": "0.60"
+				}, {
+					"nom": "Ontaritzi",
+					"section": "0.2 km en aval du barrage du lac Saint-Joseph ",
+					"station": "050807",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Ouelle",
+					"section": "2.7 km en aval du pont-route près de Saint-Gabriel-de-Kamouraska ",
+					"station": "022704",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Sautauriski",
+					"section": "",
+					"region": "Québec",
+					"station": "050801",
+					"ponderation": "0.18"
+				}, {
+					"nom": "St-Anne-du-Nord",
+					"section": "Sept-Chutes ",
+					"station": "051001",
+					"ponderation": "0.88"
+				}, {
+					"nom": "St-Charles",
+					"section": "",
+					"station": "050904",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Ste-Anne",
+					"section": "St-Raymond-La Pérade ",
+					"station": "050408",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Tourilli 1997-Oct 2004",
+					"region": "Québec",
+					"station": "050408",
+					"ponderation": "0.17"
+				}, {
+					"nom": "Tourilli Oct 2004-",
+					"section": "",
+					"region": "Québec",
+					"ponderation": "0.40"
+				}			
+			]
+		}, {
+			"nom": "Saguenay et Lac St-Jean",
+			"rivieres": [
+				{
+					"nom": "Basse Cyriac",
+					"section": "à 9 km de son embouchure",
+					"station": "061024",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Belle Rivière",
+					"section": "en amont du ruisseau des Aulnaies",
+					"station": "061307",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Chamouchouane",
+					"section": "Bas",
+					"station": "061901",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Chamouchouane",
+					"section": "Haut",
+					"station": "061905",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Ecorces",
+					"section": "",
+					"station": "061020",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Mistassibi",
+					"section": "",
+					"station": "062114",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Mistassini",
+					"section": "",
+					"station": "062102",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Métabetchouane",
+					"region": "Saguenay et Lac St-Jean",
+					"station": "061502",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Pikauba-Chicoutimi",
+					"section": "",
+					"station": "061022",
+					"ponderation": "1.60"
+				}, {
+					"nom": "Ste Marguerite Nord-Est",
+					"section": "",
+					"station": "062803",
+					"ponderation": "1.00"
+				}
+			]
+		}, {
+			"nom": "Estrie",
+			"rivieres": [ 
+				{
+					"nom": "Ascot",
+					"section": "",
+					"station": "030215",
+					"ponderation": "0.41"
+				}, {
+					"nom": "Eaton",
+					"section": "0.6 km de la Saint-Francois",
+					"station": "030234",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Massawipi",
+					"section": "1.6 km en aval du lac Massawippi",
+					"station": "030220",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Moe",
+					"section": "",
+					"station": "030215",
+					"ponderation": "0.28"
+				}, {
+					"nom": "Noire",
+					"section": "Roxton Falls (030304)",
+					"station": "030304",
+					"ponderation": "0.30"
+				}, {
+					"nom": "Saint-Francois",
+					"section": "0.5 km en aval de la centrale de Weedon",
+					"station": "030284",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Saint-Francois",
+					"section": "0.6 km en aval du barrage Jules-Allard",
+					"station": "030225",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Saumon",
+					"section": "Scottstown",
+					"station": "030282",
+					"ponderation": "0.22"
+				}, {
+					"nom": "Yamaska ",
+					"section": "Adamsville",
+					"station": "030302",
+					"ponderation": "0.35"
+				}, {
+					"nom": "Yamaska ",
+					"section": "Haute",
+					"station": "030302",
+					"ponderation": "0.20"
+				}, {
+					"nom": "Yamaska ",
+					"section": "Lac Brome",
+					"station": "030351",
+					"ponderation": "1.00"
+				}
+			]
+		}, {
+			"nom": "Gaspésie",
+			"rivieres": [
+				{
+					"nom": "Bonaventure ",
+					"section": "2.4 km en amont du ruisseau Creux",
+					"station": "010802",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Matane",
+					"section": "8.5 Km amont Rte 132",
+					"station": "021601",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Matapédia",
+					"section": "4.0 Km amont Assemetquagan",
+					"station": "011509",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Rimouski",
+					"section": "3.7 Km amont rte 132",
+					"station": "022003",
+					"ponderation": "1.00"
+				}	
+			]
+		}, {
+			"nom": "Laurentides",
+			"rivieres": [
+				{
+					"nom": "Achigan",
+					"section": "",
+					"station": "052233",
+					"ponderation": "0.26"
+				}, {
+					"nom": "Assomption",
+					"section": "Joliette",
+					"station": "052219",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Bonniebrooke",
+					"section": "",
+					"station": "040110",
+					"ponderation": "0.08"
+				}, {
+					"nom": "Diable (1997-2004)",
+					"section": "Ancienne balise",
+					"station": "040110",
+					"ponderation": "0.36"
+				}, {
+					"nom": "Diable (2005-)",
+					"section": "",
+					"station": "040122",
+					"ponderation": "1.40"
+				}, {
+					"nom": "Doncaster",
+					"section": "Ste-Marguerite",
+					"station": "040110",
+					"ponderation": "0.11"
+				}, {
+					"nom": "Du Nord",
+					"section": "St-Agathe",
+					"station": "040122",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Du Nord",
+					"section": "St-Jerome ",
+					"station": "040110",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Mitchinamecus ",
+					"section": "",
+					"station": "040619",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Mulets",
+					"section": "",
+					"station": "040110",
+					"ponderation": "0.08"
+				}, {
+					"nom": "Ouareau ",
+					"section": "",
+					"station": "052212",
+					"ponderation": "0.80"
+				}, {
+					"nom": "Rouge ",
+					"section": "21 milles",
+					"station": "040204",
+					"ponderation": "0.16"
+				}, {
+					"nom": "Rouge ",
+					"section": "Canyon et 7 Chutes",
+					"station": "040204",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Simon ",
+					"section": "",
+					"station": "040110",
+					"ponderation": "0.14"
+				}, {
+					"nom": "Kiamika ",
+					"section": "0.1 km en amont du pont-route a Chute-Saint-Philippe",
+					"station": "040627",
+					"ponderation": "1.00"
+				}
+			]
+		}, {
+			"nom": "Mauricie",
+			"rivieres": [
+				{
+					"nom": "Bastiscan",
+					"section": "Basse",
+					"station": "050304",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Batiscan",
+					"section": "Portes de l'Enfer",
+					"station": "050304",
+					"ponderation": "0.64"
+				}, {
+					"nom": "Jeannotte",
+					"section": "",
+					"station": "050304",
+					"ponderation": "0.20"
+				}, {
+					"nom": "Mastigouche",
+					"section": "0.1 km en aval du lac Sainte-Rose",
+					"station": "052606",
+					"ponderation": "1.00"
+				}, {
+					"nom": "Vermillon",
+					"section": "Rapide Blanc",
+					"station": "050144",
+					"ponderation": "1.00"
+				}
+			]
+		}		
+	]
+}

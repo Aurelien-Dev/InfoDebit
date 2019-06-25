@@ -1,0 +1,13 @@
+{
+  "production": {
+    "infoDebit": {
+      "url": "http://www.cehq.gouv.qc.ca/suivihydro/fichier_donnees.asp"
+    }
+  },
+  
+  "development": {
+    "infoDebit": {
+      "url": "http://www.cehq.gouv.qc.ca/suivihydro/fichier_donnees.asp"
+    }
+  }
+}
