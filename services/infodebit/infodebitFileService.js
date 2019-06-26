@@ -1,9 +1,6 @@
-/// <reference path="../../models/infodebit/InfodebitManager.js" />
-
 var config = require('../../config.js');
 var Exception = require('handlebars');
 var async = require('async');
-var InfodebitManager = require('../../models/infodebit/InfodebitManager.js');
 var _ = require('underscore');
 
 Array.prototype.forEach2 = function (a) {
@@ -27,7 +24,7 @@ function getData(numeroStation, callback) {
                 });
                 response.on('end', function() {
                     callback(null, data);
-                })
+                });
             });
             request.on('error', function(e) {
                 throw Exception('Une erreur est arrivée lors du telechargement du fichier de station');
