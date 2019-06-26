@@ -1,11 +1,11 @@
 {
-  "production": {
+  "prod": {
     "infoDebit": {
       "url": "http://www.cehq.gouv.qc.ca/suivihydro/fichier_donnees.asp"
     }
   },
   
-  "development": {
+  "dev": {
     "infoDebit": {
       "url": "http://www.cehq.gouv.qc.ca/suivihydro/fichier_donnees.asp"
     }
