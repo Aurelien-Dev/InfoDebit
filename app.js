@@ -33,6 +33,6 @@ app.use(iutController);
 
 
 //Création sur serveur web
-var server = app.listen(app.get('port'), function() {
+var server = app.listen(3000, function() {
     console.log(new Date().toLocaleString() + ' - Express started on port ' + app.get('port'));
 });
