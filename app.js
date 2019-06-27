@@ -7,10 +7,8 @@ var express = require('express');
 var utils = require('./utils/utils.js');
 var expressHandle = require('express-handlebars');
 
-
 var app = module.exports = express();
 app.set('port', process.env.PORT || 3000);
-
 
 var hbs = expressHandle.create({
 						layoutsDir: 'views/infodebit/layout/',
@@ -33,6 +31,6 @@ app.use(iutController);
 
 
 //Création sur serveur web
-var server = app.listen(3000, function() {
-    console.log(new Date().toLocaleString() + ' - Express started on port ' + app.get('port'));
+app.listen(3000, function() {
+    console.log(new Date().toLocaleString() + ' - Server web started on port ' + app.get('port'));
 });
