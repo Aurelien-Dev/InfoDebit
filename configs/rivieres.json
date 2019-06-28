@@ -71,7 +71,9 @@
 					"nom": "Chaudiere",
 					"section": "Bas des chutes",
 					"station": "023402",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"colonne-index-debit": 4
+
 				}, {
 					"nom": "Chaudiere",
 					"section": "Lac Mégantic aval du barrage",
@@ -81,7 +83,8 @@
 					"nom": "Chaudiere",
 					"section": "St-Lambert",
 					"station": "023402",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"colonne-index-debit": 4
 				}, {
 					"nom": "Des Neiges",
 					"section": "",

@@ -1,47 +1,52 @@
 <div class="accordion" id="accordionExample">
-	{{#each rivieres.regions}}
-		<div class="card">
-			<div class="card-header" data-toggle="collapse" data-target="#region{{@index}}" aria-expanded="true" aria-controls="region{{@index}}">
-				<h5 class="mb-0">{{this.nom}}</h5>
-			</div>
-			<div id="region{{@index}}" class="collapse hide" data-parent="#accordionExample" >
-				<div class="card-body">
-					<div class="row header">
-						<div class="col-md-2 text-center"><label>Rivière</label></div>
-						<div class="col-md-5 text-center"><label>Section</label></div>
-						<div class="col-md-1 text-center"><label>Débit</label></div>
-						<div class="col-md-1 text-center"><label>Pondération</label></div>
-						<div class="col-md-1 text-center"><label>Station</label></div>
-						<div class="col-md-2 text-center"><label>Date d'actualisation</label></div>
-					</div>
-					{{#each this.rivieres}}
-						<div class="row border-top border-primary" data-station="{{this.station}}" data-ponderation="{{this.ponderation}}">
-							<div class="col-md-2"><span>{{this.nom}}</span></div>
-							<div class="col-md-5"><span>{{this.section}}</span></div>
-							<div class="col-md-1 text-center" data-calcule="debit">
-								<img src="./Loader.gif" alt="Chargement">
-							</div>
-							<div class="col-md-1 text-center">
-								{{this.ponderation}}
-							</div>
-							<div class="col-md-1 text-center">
-								<a href="http://www.cehq.gouv.qc.ca/suivihydro/fichier_donnees.asp?NoStation={{this.station}}" target="new"><span>{{this.station}}</span></a>
-								<a href="http://www.cehq.gouv.qc.ca/suivihydro/graphique.asp?NoStation={{this.station}}" target="new"><span class="oi oi-graph"></span></a>
-							</div>
-							<div class="col-md-2 text-center" data-calcule="date">
-								<span><img src="./Loader.gif" alt="Chargement"></span>
-							</div>
-						</div>
-					{{/each}}
-				</div>
-			</div>
-		</div>
-	{{/each}}
+	<table class="table">
+		<caption>
+			<h5 class="mb-0">{{this.nom}}</h5>
+		</caption>
+		<thead>
+			<tr>
+				<th>Region</th>
+				<th>Rivière</th>
+				<th>Section</th>
+				<th>Débit</th>
+				<th>Pondération</th>
+				<th>Station</th>
+				<th>Date d'actualisation</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each rivieres.regions}}
+
+			{{#each this.rivieres}}
+			<tr data-station="{{this.station}}" data-ponderation="{{this.ponderation}}"
+				data-colonne-index="{{this.colonne-index-debit}}">
+				<td>{{../this.nom}}</td>
+				<td>{{this.nom}}</td>
+				<td>{{this.section}}</td>
+				<td data-calcule="debit">
+					<img src="./Loader.gif" alt="Chargement">
+				</td>
+				<td>
+					{{this.ponderation}}
+				</td>
+				<td>
+					<a href="http://www.cehq.gouv.qc.ca/suivihydro/fichier_donnees.asp?NoStation={{this.station}}"
+						target="new"><span>{{this.station}}</span></a>
+					<a href="http://www.cehq.gouv.qc.ca/suivihydro/graphique.asp?NoStation={{this.station}}"
+						target="new"><span class="oi oi-graph"></span></a>
+				</td>
+				<td data-calcule="date">
+					<img src="./Loader.gif" alt="Chargement" />
+				</td>
+			</tr>
+			{{/each}}
+
+			{{/each}}
+		</tbody>
+	</table>
 </div>
 
-
-{{#contentFor "pageStyles"}}
-<style>
+{{#contentFor "pageStyles"}} <style>
 	*[data-station] {
 		font-size: 1.1em;
 	}
@@ -50,24 +55,62 @@
 		font-weight: bold;
 		font-size: 1.1em;
 	}
+
+	tr.group,
+	tr.group:hover {
+		background-color: #ddd !important;
+		font-weight: bold;
+		text-align: center;
+	}
 </style>
 {{/contentFor}}
 
 
-{{#contentFor "pageScripts"}}  
+{{#contentFor "pageScripts"}}
 <script>
-$(function() {
-	$('*[data-station]').each(function(index, section) {
-		var station = $(section).attr('data-station');
-		var ponderation = $(section).attr('data-ponderation');
+	$(function () {
+		var groupColumn = 0;
+		$('table').DataTable({
+			"paging": false,
+			"columnDefs": [
+				{ "visible": false, "targets": groupColumn }
+			],
+			"order": [[groupColumn, 'asc']],
+			"displayLength": 25,
+			"drawCallback": function (settings) {
+				var api = this.api();
+				var rows = api.rows({ page: 'current' }).nodes();
+				var last = null;
 
-		$.get('/api/infodebit/' + station, function(retour) {
-			var debitPondere = retour.result.debit * ponderation
-			var date = retour.result.date;
-			$(section).find('[data-calcule=debit]').html('<span data-toggle="tooltip" data-placement="top" title="Pondération : ' + ponderation + '">' + debitPondere.toFixed(2) + '</span>');
-			$(section).find('[data-calcule=date]').html(date);
+				api.column(groupColumn, { page: 'current' }).data().each(function (group, i) {
+					if (last !== group) {
+						$(rows).eq(i).before(
+							'<tr class="group"><td colspan="6">' + group + '</td></tr>'
+						);
+
+						last = group;
+					}
+				});
+			}
 		});
+
+		$('*[data-station]').each(function (index, section) {
+			var station = $(section).data('station');
+			var ponderation = $(section).data('ponderation');
+			var colonneIndex = $(section).data('colonne-index');
+
+			$.post('/api/infodebit/' + station,
+				{
+					colonneIndex: colonneIndex
+				},
+				function (retour) {
+					var debitPondere = retour.result.debit * parseFloat(ponderation);
+					var date = retour.result.date;
+					$(section).find('[data-calcule=debit]').html('<span data-toggle="tooltip" data-placement="top" title="Pondération : ' + ponderation + '">' + debitPondere.toFixed(2) + '</span>');
+					$(section).find('[data-calcule=date]').html(date);
+				});
+		});
+
 	});
-});
 </script>
 {{/contentFor}}

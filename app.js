@@ -6,6 +6,7 @@
 var express = require('express');
 var utils = require('./utils/utils.js');
 var expressHandle = require('express-handlebars');
+var bodyParser  = require('body-parser');
 
 var app = module.exports = express();
 app.set('port', process.env.PORT || 3000);
@@ -22,6 +23,9 @@ app.set('view engine', 'handlebars');
 
 //Ouverture d'un dossier public
 app.use(express.static('public/infodebit'));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 var apiController = require('./controller/infodebit/api');
 app.use(apiController);

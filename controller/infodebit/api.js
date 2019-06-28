@@ -7,10 +7,10 @@ var express = require('express');
 var router = express.Router();
 
 /*
-** 
-*/
-router.get('/api/infodebit/:idStation', function (request, response) {
-	infodebitService.obtenirDebitParStation(request.params.idStation, function (result) {
+ * Permet d'obtenir le dernier débit d'une station
+ */
+router.post('/api/infodebit/:idStation', function (request, response) {
+	infodebitService.obtenirDebitParStation(request.params.idStation, request.body.colonneIndex, function (result) {
 		response.json({ success: true, result: result });
 	});
 });

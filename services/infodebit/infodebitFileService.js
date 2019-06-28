@@ -8,7 +8,13 @@ Array.prototype.forEach2 = function (a) {
 	for(var i=0;i<l;i++)a(this[i],i)
 };
 
-function getData(numeroStation, callback) {
+/**
+ * Traitement permettant d'obtenir le débit d'une station
+ * @param {int} numeroStation Numéro de la station de débit
+ * @param {int} colonneIndexDebit Numéro de la colonne correspondant au débit
+ * @param {function} callback function Waterfall
+ */
+function getData(numeroStation, colonneIndexDebit, callback) {
     /*
     ** Utilisation d'async afin de garder une cohérence et un ordre d'éxecution de tout les traitements asynchrones
     */
@@ -41,10 +47,12 @@ function getData(numeroStation, callback) {
 
             if (!data.includes('<head>'))
             {
+                if (colonneIndexDebit == "") colonneIndexDebit = 2;
+
                 var currentData = data.toString().split(/(?:\r\n|\r|\n)/g);
                 var ligneDebit = currentData[2].split(/(?:\t)/g);
                 info.date = ligneDebit[0] + ' ' + ligneDebit[1];
-                info.debit = parseFloat(ligneDebit[2]);
+                info.debit = parseFloat(ligneDebit[colonneIndexDebit].replace(",", "."));
             }
 
             callback(info);
