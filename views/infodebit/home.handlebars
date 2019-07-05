@@ -19,7 +19,7 @@
 
 			{{#each this.rivieres}}
 			<tr data-station="{{this.station}}" data-ponderation="{{this.ponderation}}"
-				data-colonne-index="{{this.colonne-index-debit}}">
+				data-colonne-index="{{this.colonneIndexDebit}}">
 				<td>{{../this.nom}}</td>
 				<td>{{this.nom}}</td>
 				<td>{{this.section}}</td>
@@ -94,7 +94,7 @@
 			}
 		});
 
-		$('*[data-station]').each(function (index, section) {
+		{{!-- $('*[data-station]').each(function (index, section) {
 			var station = $(section).data('station');
 			var ponderation = $(section).data('ponderation');
 			var colonneIndex = $(section).data('colonne-index');
@@ -109,8 +109,17 @@
 					$(section).find('[data-calcule=debit]').html('<span data-toggle="tooltip" data-placement="top" title="Pondération : ' + ponderation + '">' + debitPondere.toFixed(2) + '</span>');
 					$(section).find('[data-calcule=date]').html(date);
 				});
+		}); --}}
+
+		var socket = io.connect('http://localhost:3000');
+
+		socket.on('debit', function (data) {
+			console.log(data);
 		});
 
+		$('tr').click(function(e) {
+			socket.emit('UnAutreEventCoteClient', { content: $(this).data('station') });
+		});
 	});
 </script>
 {{/contentFor}}

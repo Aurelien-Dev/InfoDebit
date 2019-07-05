@@ -4,6 +4,7 @@
 var config = require('../../config.js');
 var express = require('express');
 var router = express.Router();
+var infodebitService = require('../../services/infodebit/infodebitFileService');
 
 /*
 ** Affichage d'accueil
@@ -13,6 +14,8 @@ router.get('/', function (request, response) {
 	{
 		rivieres: config.infoDebit.rivieres
 	});
+	// infodebitService.obtenirToutLesDebits(config.infoDebit.rivieres, function() {
+	// });
 });
 
 module.exports = router;

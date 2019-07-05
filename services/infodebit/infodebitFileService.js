@@ -9,6 +9,33 @@ Array.prototype.forEach2 = function (a) {
 };
 
 /**
+ * Permet d'obtenir tout les débits du fichier json de rivière
+ * @param {*} rivieres : données sur les rivières
+ */
+function getAllDebit(rivieres, callbackRetour) {
+
+    async.forEachOf(rivieres.regions, function (region, key, callbackRegion) {        
+
+        async.forEachOf(region.rivieres, function (riviere, key, callbackRiviere) {
+
+            getData(riviere.station, riviere.colonneIndexDebit, function(result) {
+                riviere.debit = (parseFloat(result.debit) * riviere.ponderation).toFixed(2);
+                riviere.dateMaj = result.date;
+
+                callbackRiviere();
+            });
+
+        }, function (err) {
+            if (err) console.error(err.message);
+            callbackRegion();
+        });
+    }, function (err) {
+        if (err) console.error(err.message);
+        callbackRetour();
+    });
+}
+
+/**
  * Traitement permettant d'obtenir le débit d'une station
  * @param {int} numeroStation Numéro de la station de débit
  * @param {int} colonneIndexDebit Numéro de la colonne correspondant au débit
@@ -23,7 +50,7 @@ function getData(numeroStation, colonneIndexDebit, callback) {
          * Récupération d'un fichier pour une station
          */
         function (callback) {
-            var data;
+            var data = '';
             var request = require("http").get(config.infoDebit.url + '?date=' + Date.now() + '&NoStation=' + numeroStation, function(response) {
                 response.on('data', function(chunk) {
                     data += chunk;
@@ -41,13 +68,13 @@ function getData(numeroStation, colonneIndexDebit, callback) {
          */
         function(data, callback) {
             var info = {
-                date:'',
-                debit:-1
+                date:'erreur',
+                debit: -999
             };
 
             if (!data.includes('<head>'))
             {
-                if (colonneIndexDebit == "") colonneIndexDebit = 2;
+                if (colonneIndexDebit == "" ||typeof colonneIndexDebit == 'undefined') colonneIndexDebit = 2;
 
                 var currentData = data.toString().split(/(?:\r\n|\r|\n)/g);
                 var ligneDebit = currentData[2].split(/(?:\t)/g);
@@ -69,5 +96,6 @@ function getData(numeroStation, colonneIndexDebit, callback) {
 
 
 module.exports = { 
-                    'obtenirDebitParStation': getData
+                    'obtenirDebitParStation': getData,
+                    'obtenirToutLesDebits': getAllDebit
                 };

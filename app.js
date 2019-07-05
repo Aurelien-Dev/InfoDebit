@@ -7,9 +7,11 @@ var express = require('express');
 var utils = require('./utils/utils.js');
 var expressHandle = require('express-handlebars');
 var bodyParser  = require('body-parser');
+var io = require('socket.io');
 
 var app = module.exports = express();
 app.set('port', process.env.PORT || 3000);
+
 
 var hbs = expressHandle.create({
 						layoutsDir: 'views/infodebit/layout/',
@@ -34,7 +36,18 @@ var iutController = require('./controller/infodebit/home');
 app.use(iutController);
 
 
+
 //Création sur serveur web
-app.listen(3000, function() {
-    console.log(new Date().toLocaleString() + ' - Server web started on port ' + app.get('port'));
+var serveur = app.listen(3000, function() {
+	console.log(new Date().toLocaleString() + ' - Server web started on port ' + app.get('port'));
+});
+
+
+io(serveur).on('connection', function (socket) {
+	
+
+	socket.on('UnAutreEventCoteClient', function (data) {
+		console.log(data.content);
+		socket.emit('debit', { content: 'voila ton débit' });
+	});
 });
