@@ -12,7 +12,6 @@ var io = require('socket.io');
 var app = module.exports = express();
 app.set('port', process.env.PORT || 3000);
 
-
 var hbs = expressHandle.create({
 						layoutsDir: 'views/infodebit/layout/',
 						defaultLayout: 'main',
@@ -34,7 +33,6 @@ app.use(apiController);
 
 var iutController = require('./controller/infodebit/home');
 app.use(iutController);
-
 
 
 //Création sur serveur web
