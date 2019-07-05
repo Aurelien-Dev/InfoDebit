@@ -6,17 +6,32 @@
 				{
 					"nom": "Du Gouffre",
 					"station": "051502",
-					"ponderation": 0.42
+					"ponderation": 0.42,
+					"niveau": {
+						"bas": 13,
+						"moyen": 25,
+						"haut": 50
+					}
 				}, {
 					"nom": "Malbaie",
 					"section": "22 Milles",
 					"station": "051502",
-					"ponderation": 0.50
+					"ponderation": 0.50,
+					"niveau": {
+						"bas": 30,
+						"moyen": 60,
+						"haut": 120
+					}
 				}, {
 					"nom": "Malbaie",
 					"section": "Hautes-Gorges",
 					"station": "051502",
-					"ponderation": 1
+					"ponderation": 1,
+					"niveau": {
+						"bas": 60,
+						"moyen": 120,
+						"haut": 240
+					}
 				}
 			]
 		}, {
@@ -51,7 +66,12 @@
 					"nom": "Petite Nation",
 					"section": "à la décharge du lac Magpie",
 					"station": "040406",
-					"ponderation": 1.20
+					"ponderation": 1.20,
+					"niveau": {
+						"bas": 17,
+						"moyen": 35,
+						"haut": 85
+					}
 				}
 			]
 		}, {
@@ -61,18 +81,33 @@
 					"nom": "Bras St-Nicolas",
 					"section": "",
 					"station": "023106",
-					"ponderation": 0.65
+					"ponderation": 0.65,
+					"niveau": {
+						"bas": 4,
+						"moyen": 20,
+						"haut": 40
+					}
 				}, {
 					"nom": "Bras St-Victor",
 					"section": "",
 					"station": "023422",
-					"ponderation": 1
+					"ponderation": 1,
+					"niveau": {
+						"bas": 15,
+						"moyen": 30,
+						"haut": 60
+					}
 				}, {
 					"nom": "Chaudiere",
 					"section": "Bas des chutes",
 					"station": "023402",
 					"ponderation": "1.00",
-					"colonne-index-debit": 4
+					"colonne-index-debit": 4,
+					"niveau": {
+						"bas": 45,
+						"moyen": 80,
+						"haut": 120
+					}
 
 				}, {
 					"nom": "Chaudiere",
@@ -84,12 +119,22 @@
 					"section": "St-Lambert",
 					"station": "023402",
 					"ponderation": "1.00",
-					"colonne-index-debit": 4
+					"colonne-index-debit": 4,
+					"niveau": {
+						"bas": 45,
+						"moyen": 80,
+						"haut": 120
+					}
 				}, {
 					"nom": "Des Neiges",
 					"section": "",
 					"station": "051001",
-					"ponderation": "0.27"
+					"ponderation": "0.27",
+					"niveau": {
+						"bas": 15,
+						"moyen": 30,
+						"haut": 60
+					}
 				},{
 					"nom": "Du Loup",
 					"section": "   à 0.6 km en amont du pont-route 185",
@@ -99,17 +144,32 @@
 					"nom": "Du Sud",
 					"section": "DuPin",
 					"station": "023106",
-					"ponderation": "0.70"
+					"ponderation": "0.70",
+					"niveau": {
+						"bas": 18,
+						"moyen": 36,
+						"haut": 90
+					}
 				}, {
 					"nom": "Du Sud",
 					"section": "St-Raphael",
 					"station": "023106",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 18,
+						"moyen": 36,
+						"haut": 90
+					}
 				}, {
 					"nom": "Etchemin",
 					"section": "Basse (ancienne information)",
 					"station": "023402",
-					"ponderation": "0.24"
+					"ponderation": "0.24",
+					"niveau": {
+						"bas": 25,
+						"moyen": 50,
+						"haut": 100
+					}
 				}, {
 					"nom": "Etchemin",
 					"section": "Basse Rte 173 St-Henri de Levis",
@@ -119,52 +179,102 @@
 					"nom": "Etchemin",
 					"section": "  Haute",
 					"station": "023402",
-					"ponderation": "0.1"
+					"ponderation": "0.1",
+					"niveau": {
+						"bas": 4,
+						"moyen": 20,
+						"haut": 40
+					}
 				}, {
 					"nom": "Jacques-Cartier",
 					"section": "Grand-Remous",
 					"station": "050801",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 43,
+						"moyen": 75,
+						"haut": 120
+					}
 				}, {
 					"nom": "Jacques-Cartier",
 					"section": "Parc (Vallée)",
 					"station": "050801",
-					"ponderation": "0.60"
+					"ponderation": "0.60",
+					"niveau": {
+						"bas": 25,
+						"moyen": 50,
+						"haut": 100
+					}
 				}, {
 					"nom": "Jacques-Cartier",
 					"section": "Pont-Rouge",
 					"station": "050801",
-					"ponderation": "1.66"
+					"ponderation": "1.66",
+					"niveau": {
+						"bas": 43,
+						"moyen": 75,
+						"haut": 120
+					}
 				}, {
 					"nom": "Jacques-Cartier",
 					"section": "Sainte-Catherine",
 					"station": "050801",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 43,
+						"moyen": 75,
+						"haut": 120
+					}
 				}, {
 					"nom": "Jacques-Cartier",
 					"section": "Taureau",
 					"station": "050801",
-					"ponderation": "0.33"
+					"ponderation": "0.33",
+					"niveau": {
+						"bas": 5,
+						"moyen": 25,
+						"haut": 40
+					}
 				}, {
 					"nom": "Jacques-Cartier",
 					"section": "Tewskesbury",
 					"station": "050801",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 43,
+						"moyen": 75,
+						"haut": 120
+					}
 				}, {
 					"nom": "Montmorency",
 					"section": "Haute ",
 					"station": "051001",
-					"ponderation": "0.25"
+					"ponderation": "0.25",
+					"niveau": {
+						"bas": 13,
+						"moyen": 25,
+						"haut": 50
+					}
 				}, {
 					"nom": "Montmorency",
 					"section": "Ste-Brigitte ",
 					"station": "051001",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 25,
+						"moyen": 50,
+						"haut": 100
+					}
 				}, {
 					"nom": "Neilson 1997-Oct 2004",
 					"section": "",
 					"station": "050408",
-					"ponderation": "0.25"
+					"ponderation": "0.25",
+					"niveau": {
+						"bas": 4,
+						"moyen": 17,
+						"haut": 24
+					}
 				}, {
 					"nom": "Neilson Oct 2004 -",
 					"section": "",
@@ -185,17 +295,32 @@
 					"section": "",
 					"region": "Québec",
 					"station": "050801",
-					"ponderation": "0.18"
+					"ponderation": "0.18",
+					"niveau": {
+						"bas": 4,
+						"moyen": 18,
+						"haut": 26
+					}
 				}, {
 					"nom": "St-Anne-du-Nord",
 					"section": "Sept-Chutes ",
 					"station": "051001",
-					"ponderation": "0.88"
+					"ponderation": "0.88",
+					"niveau": {
+						"bas": 20,
+						"moyen": 40,
+						"haut": 100
+					}
 				}, {
 					"nom": "St-Charles",
 					"section": "",
 					"station": "050904",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 8,
+						"moyen": 16,
+						"haut": 32
+					}
 				}, {
 					"nom": "Ste-Anne",
 					"section": "St-Raymond-La Pérade ",
@@ -205,12 +330,22 @@
 					"nom": "Tourilli 1997-Oct 2004",
 					"region": "Québec",
 					"station": "050408",
-					"ponderation": "0.17"
+					"ponderation": "0.17",
+					"niveau": {
+						"bas": 4,
+						"moyen": 16,
+						"haut": 22
+					}
 				}, {
 					"nom": "Tourilli Oct 2004-",
 					"section": "",
 					"region": "Québec",
-					"ponderation": "0.40"
+					"ponderation": "0.40",
+					"niveau": {
+						"bas": 4,
+						"moyen": 16,
+						"haut": 22
+					}
 				}			
 			]
 		}, {
@@ -220,7 +355,12 @@
 					"nom": "Basse Cyriac",
 					"section": "à 9 km de son embouchure",
 					"station": "061024",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 3,
+						"moyen": 16,
+						"haut": 32
+					}
 				}, {
 					"nom": "Belle Rivière",
 					"section": "en amont du ruisseau des Aulnaies",
@@ -230,22 +370,42 @@
 					"nom": "Chamouchouane",
 					"section": "Bas",
 					"station": "061901",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 75,
+						"moyen": 150,
+						"haut": 300
+					}
 				}, {
 					"nom": "Chamouchouane",
 					"section": "Haut",
 					"station": "061905",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 75,
+						"moyen": 150,
+						"haut": 300
+					}
 				}, {
 					"nom": "Ecorces",
 					"section": "",
 					"station": "061020",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 25,
+						"moyen": 50,
+						"haut": 100
+					}
 				}, {
 					"nom": "Mistassibi",
 					"section": "",
 					"station": "062114",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 135,
+						"moyen": 270,
+						"haut": 400
+					}
 				}, {
 					"nom": "Mistassini",
 					"section": "",
@@ -255,12 +415,22 @@
 					"nom": "Métabetchouane",
 					"region": "Saguenay et Lac St-Jean",
 					"station": "061502",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 35,
+						"moyen": 70,
+						"haut": 120
+					}
 				}, {
 					"nom": "Pikauba-Chicoutimi",
 					"section": "",
 					"station": "061022",
-					"ponderation": "1.60"
+					"ponderation": "1.60",
+					"niveau": {
+						"bas": 13,
+						"moyen": 28,
+						"haut": 56
+					}
 				}, {
 					"nom": "Ste Marguerite Nord-Est",
 					"section": "",
@@ -275,7 +445,12 @@
 					"nom": "Ascot",
 					"section": "",
 					"station": "030215",
-					"ponderation": "0.41"
+					"ponderation": "0.41",
+					"niveau": {
+						"bas": 5,
+						"moyen": 10,
+						"haut": 20
+					}
 				}, {
 					"nom": "Eaton",
 					"section": "0.6 km de la Saint-Francois",
@@ -295,7 +470,12 @@
 					"nom": "Noire",
 					"section": "Roxton Falls (030304)",
 					"station": "030304",
-					"ponderation": "0.30"
+					"ponderation": "0.30",
+					"niveau": {
+						"bas": 5,
+						"moyen": 15,
+						"haut": 30
+					}
 				}, {
 					"nom": "Saint-Francois",
 					"section": "0.5 km en aval de la centrale de Weedon",
@@ -310,17 +490,32 @@
 					"nom": "Saumon",
 					"section": "Scottstown",
 					"station": "030282",
-					"ponderation": "0.22"
+					"ponderation": "0.22",
+					"niveau": {
+						"bas": 2,
+						"moyen": 14,
+						"haut": 28
+					}
 				}, {
 					"nom": "Yamaska ",
 					"section": "Adamsville",
 					"station": "030302",
-					"ponderation": "0.35"
+					"ponderation": "0.35",
+					"niveau": {
+						"bas": 2,
+						"moyen": 14,
+						"haut": 28
+					}
 				}, {
 					"nom": "Yamaska ",
 					"section": "Haute",
 					"station": "030302",
-					"ponderation": "0.20"
+					"ponderation": "0.20",
+					"niveau": {
+						"bas": 2,
+						"moyen": 14,
+						"haut": 28
+					}
 				}, {
 					"nom": "Yamaska ",
 					"section": "Lac Brome",
@@ -335,7 +530,12 @@
 					"nom": "Bonaventure ",
 					"section": "2.4 km en amont du ruisseau Creux",
 					"station": "010802",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 30,
+						"moyen": 80,
+						"haut": 150
+					}
 				}, {
 					"nom": "Matane",
 					"section": "8.5 Km amont Rte 132",
@@ -360,7 +560,12 @@
 					"nom": "Achigan",
 					"section": "",
 					"station": "052233",
-					"ponderation": "0.26"
+					"ponderation": "0.26",
+					"niveau": {
+						"bas": 5,
+						"moyen": 9,
+						"haut": 15
+					}
 				}, {
 					"nom": "Assomption",
 					"section": "Joliette",
@@ -370,12 +575,22 @@
 					"nom": "Bonniebrooke",
 					"section": "",
 					"station": "040110",
-					"ponderation": "0.08"
+					"ponderation": "0.08",
+					"niveau": {
+						"bas": 2,
+						"moyen": 4,
+						"haut": 10
+					}
 				}, {
 					"nom": "Diable (1997-2004)",
 					"section": "Ancienne balise",
 					"station": "040110",
-					"ponderation": "0.36"
+					"ponderation": "0.36",
+					"niveau": {
+						"bas": 3,
+						"moyen": 16,
+						"haut": 32
+					}
 				}, {
 					"nom": "Diable (2005-)",
 					"section": "",
@@ -385,7 +600,12 @@
 					"nom": "Doncaster",
 					"section": "Ste-Marguerite",
 					"station": "040110",
-					"ponderation": "0.11"
+					"ponderation": "0.11",
+					"niveau": {
+						"bas": 5,
+						"moyen": 14,
+						"haut": 20
+					}
 				}, {
 					"nom": "Du Nord",
 					"section": "St-Agathe",
@@ -405,7 +625,12 @@
 					"nom": "Mulets",
 					"section": "",
 					"station": "040110",
-					"ponderation": "0.08"
+					"ponderation": "0.08",
+					"niveau": {
+						"bas": 2,
+						"moyen": 4,
+						"haut": 10
+					}
 				}, {
 					"nom": "Ouareau ",
 					"section": "",
@@ -415,17 +640,32 @@
 					"nom": "Rouge ",
 					"section": "21 milles",
 					"station": "040204",
-					"ponderation": "0.16"
+					"ponderation": "0.16",
+					"niveau": {
+						"bas": 7,
+						"moyen": 19,
+						"haut": 35
+					}
 				}, {
 					"nom": "Rouge ",
 					"section": "Canyon et 7 Chutes",
 					"station": "040204",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 40,
+						"moyen": 75,
+						"haut": 120
+					}
 				}, {
 					"nom": "Simon ",
 					"section": "",
 					"station": "040110",
-					"ponderation": "0.14"
+					"ponderation": "0.14",
+					"niveau": {
+						"bas": 4,
+						"moyen": 10,
+						"haut": 16
+					}
 				}, {
 					"nom": "Kiamika ",
 					"section": "0.1 km en amont du pont-route a Chute-Saint-Philippe",
@@ -440,17 +680,32 @@
 					"nom": "Bastiscan",
 					"section": "Basse",
 					"station": "050304",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 35,
+						"moyen": 70,
+						"haut": 115
+					}
 				}, {
 					"nom": "Batiscan",
 					"section": "Portes de l'Enfer",
 					"station": "050304",
-					"ponderation": "0.64"
+					"ponderation": "0.64",
+					"niveau": {
+						"bas": 35,
+						"moyen": 70,
+						"haut": 115
+					}
 				}, {
 					"nom": "Jeannotte",
 					"section": "",
 					"station": "050304",
-					"ponderation": "0.20"
+					"ponderation": "0.20",
+					"niveau": {
+						"bas": 35,
+						"moyen": 70,
+						"haut": 115
+					}
 				}, {
 					"nom": "Mastigouche",
 					"section": "0.1 km en aval du lac Sainte-Rose",
@@ -460,7 +715,12 @@
 					"nom": "Vermillon",
 					"section": "Rapide Blanc",
 					"station": "050144",
-					"ponderation": "1.00"
+					"ponderation": "1.00",
+					"niveau": {
+						"bas": 19,
+						"moyen": 38,
+						"haut": 76
+					}
 				}
 			]
 		}		
