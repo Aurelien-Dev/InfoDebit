@@ -8,6 +8,7 @@ var utils = require('./utils/utils.js');
 var expressHandle = require('express-handlebars');
 var bodyParser  = require('body-parser');
 var io = require('socket.io');
+var infodebitService = require('./services/infodebit/infodebitFileService');
 
 var app = module.exports = express();
 app.set('port', process.env.PORT || 3000);
@@ -45,7 +46,14 @@ io(serveur).on('connection', function (socket) {
 	
 
 	socket.on('UnAutreEventCoteClient', function (data) {
-		console.log(data.content);
-		socket.emit('debit', { content: 'voila ton débit' });
+		console.log(data);
+
+		infodebitService.obtenirDebitParStation(data.numeroStation, data.colonneIndex, function(resultat) {
+			resultat.numeroStation = data.numeroStation;
+			socket.emit('debit', resultat);
+		});
+		
 	});
+
+
 });

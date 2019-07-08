@@ -115,10 +115,23 @@
 
 		socket.on('debit', function (data) {
 			console.log(data);
+			$('*[data-station="' + data.numeroStation + '"]').each(function() {
+				var ponderation = $(this).data('ponderation');
+
+				var debitPondere = data.debit * parseFloat(ponderation);
+				var date = data.date;
+
+				$(this).find('[data-calcule=debit]').html('<span data-toggle="tooltip" data-placement="top" title="Pondération : ' + ponderation + '">' + debitPondere.toFixed(2) + '</span>');
+				$(this).find('[data-calcule=date]').html(date);
+			});
 		});
 
 		$('tr').click(function(e) {
-			socket.emit('UnAutreEventCoteClient', { content: $(this).data('station') });
+			socket.emit('UnAutreEventCoteClient', 
+			{
+				numeroStation: $(this).data('station'),
+				colonneIndex:  $(this).data('colonne-index')
+			});
 		});
 	});
 </script>
