@@ -114,7 +114,7 @@
 		var socket = io.connect('http://localhost:3000');
 
 		socket.on('debit', function (data) {
-			console.log(data);
+			
 			$('*[data-station="' + data.numeroStation + '"]').each(function() {
 				var ponderation = $(this).data('ponderation');
 
@@ -125,6 +125,18 @@
 				$(this).find('[data-calcule=date]').html(date);
 			});
 		});
+
+
+		var stations = $('*[data-station]').map(function() { return $(this).data('station'); });
+
+		var station2 = _.uniq(stations);
+		$.each(station2, function() {
+
+			
+		});
+
+		console.log(stations.length);
+		console.log(station2.length);
 
 		$('tr').click(function(e) {
 			socket.emit('UnAutreEventCoteClient', 

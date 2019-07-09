@@ -42,7 +42,7 @@ var serveur = app.listen(3000, function() {
 });
 
 
-io(serveur).on('connection', function (socket) {
+io().on('connection', function (socket) {
 	
 
 	socket.on('UnAutreEventCoteClient', function (data) {
